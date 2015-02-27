@@ -14,7 +14,7 @@ testloop:
 	while sleep 1; do nosetests -s tests ; done
 
 cov cover coverage: flake pep8
-	nosetests -s --with-coverage --cover-html --cover-package aioes --cover-branches --cover-erase
+	nosetests -s --with-coverage --cover-html --cover-package aiocayley --cover-branches --cover-erase
 	@echo "open file://`pwd`/cover/index.html"
 
 clean:
