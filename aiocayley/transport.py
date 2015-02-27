@@ -22,8 +22,8 @@ class Transport:
     @asyncio.coroutine
     def get_connection(self):
         """
-        Retreive a :class:`~aioes.Connection` instance from the
-        :class:`~aioes.Connection` instance.
+        Retreive a :class:`~aiocayley.Connection` instance from the
+        :class:`~aiocayley.Connection` instance.
         """
         return self._connection
 
