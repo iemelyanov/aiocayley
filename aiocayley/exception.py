@@ -6,7 +6,7 @@ __all__ = [
 
 
 class CayleyException(Exception):
-    """Base elastic search exception.
+    """Base cayley exception.
 
     Base class for all exceptions raised by this package's operations.
     """

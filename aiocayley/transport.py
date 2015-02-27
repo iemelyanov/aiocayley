@@ -34,7 +34,7 @@ class Transport:
         :arg method: HTTP method to use
         :arg url: absolute url (without endpoint) to target
         :arg params: dictionary of query parameters, will be handed over to the
-          underlying :class:`~elasticsearch.Connection` class for serialization
+          underlying :class:`~cayley.Connection` class for serialization
         :arg body: body of the request, will be serializes using serializer and
             passed to the connection
         """
