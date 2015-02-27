@@ -1,7 +1,6 @@
 import asyncio
 import json
 from aiocayley.transport import Transport
-from aiocayley.exception import (NotFoundError, TransportError)
 
 
 default = object()

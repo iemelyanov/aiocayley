@@ -22,7 +22,8 @@ def read(f):
 
 def read_version():
     regexp = re.compile(r"^__version__\W*=\W*'([\d.abrc]+)'")
-    init_py = os.path.join(os.path.dirname(__file__), 'aiocayley', '__init__.py')
+    init_py = os.path.join(os.path.dirname(__file__), 'aiocayley',
+                           '__init__.py')
     with open(init_py) as f:
         for line in f:
             match = regexp.match(line)

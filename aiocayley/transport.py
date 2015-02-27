@@ -1,13 +1,8 @@
 import asyncio
-import collections
-import itertools
 import json
-import random
-import re
-import time
 
 from .connection import Connection
-from .exception import ConnectionError, TransportError
+from .exception import ConnectionError
 
 
 class Transport:
@@ -20,7 +15,7 @@ class Transport:
     def __init__(self, host, port, *, loop):
         self._loop = loop
         self._connection = Connection(host, port, loop=self._loop)
-  
+
     def close(self):
         self._connection.close()
 

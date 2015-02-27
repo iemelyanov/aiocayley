@@ -1,8 +1,6 @@
 import asyncio
 import unittest
 from aiocayley import Cayley
-from aiocayley.exception import (NotFoundError, ConflictError,
-                                 RequestError, TransportError)
 
 import pprint
 pp = pprint.pprint
@@ -25,12 +23,3 @@ class TestClient(unittest.TestCase):
             self.assertEqual(["simple query"], data['result'])
         self.loop.run_until_complete(go())
         self.cl.__repr__()
-
-    def test_simple_query2(self):
-        @asyncio.coroutine
-        def go():
-            data = yield from self.cl.query(
-                'g.V("фильм").Out("synonym").In("synonym").All()')
-            print(data)
-        self.loop.run_until_complete(go())
-
